@@ -1,0 +1,105 @@
+
+DOCUMENTATION - EN-US
+------------------------------------
+
+
+HOW TO CALL IT
+
+For best use the module should be called in the format:
+"from Vectorial import Vector"
+
+In this way the creation of new vectors is facilitated, as for example:
+vector1 = Vector(1,3)
+or vector2 = Vector(2.4)
+
+------------------------------------
+
+PRINT FUNCTION
+
+The vectors are printed in coordinate format, for example:
+print (vector1) /// output: (1,3)
+
+------------------------------------
+
+OPERATIONS
+
+All operations between two vectors work just like any other Python operation, for example:
+
+print (vector1 + vector2) /// output: (3,7)
+print (vector1 - vector2) /// output: (-1, -1)
+print (vector1 * 4) /// output: (4,12)
+
+That is, the operation with vectors results in a new vector.
+The exception is when we multiply 2 vectors, which returns their internal product:
+
+print (vector1 * vector2) /// output: 50.42
+
+------------------------------------
+
+LOGICAL OPERATORS
+
+GREATER THAN (>):
+Allows you to use the logical operator "greater than" by comparing the module of the vectors
+:param other: vector to be compared
+:return: True or False
+
+LESS THAN (<):
+It allows the "less than" logical operator to be used by comparing the vector module
+:param other: vector to be compared
+:return: True or False
+
+GREATER OR EQUAL (> =):
+It allows you to use the logical operator "greater than or equal to" by comparing the vector module
+:param other: vector to be compared
+:return: True or False
+
+MINOR OR EQUAL (<=):
+It allows the logical operator "less than or equal to" to be used by comparing the vector module
+:param other: vector to be compared
+:return: True or False
+
+EQUAL (==):
+It allows you to use the "equal" logical operator, comparing if two vectors are equal. The vectors will only be considered equal if they have the same module, direction and notion.
+:param other: vector to be compared
+:return: True or False
+
+DIFFERENT (! =):
+It allows you to use the "different" logical operator, comparing if two vectors are different. The vectors will only be different considering if they have different module, direction or notion.
+:param other: vector to be compared
+:return: True or False
+
+------------------------------------
+
+STATIC FUNCTIONS
+
+Due to the fact that all functions depend on a vector represented in coordinates, it was necessary to create a separate function to deal with vectors represented by magnitude and angle. So if you have a vector that is not represented by coordinates first use the function below. This function will generate the same vector, however represented in coordinates. To return to the original form use the function self.compose() in the new vector.
+
+Vector.decompose (module, angle):
+Returns a vector represented with coordinates.
+print (Vector.decompose(3.16,71.57)) /// output: (1,3)
+
+------------------------------------
+
+FUNCTIONS
+
+To illustrate the use of the functions we will use vector1 (1,3) created at the beginning of this document.
+
+self.unit() /// vector1.unit():
+Returns the unit vector of this vector, for example:
+print (vector1.unit()) /// output: (0.3164556962025316,0.9493670886075949)
+
+self.module() /// vector1.module():
+Returns the module of this vector, for example:
+print (vector1.module()) /// output: 3.16
+
+self.angle() /// vector1.angle():
+Returns the angle formed by the vector and the x-axis, for example:
+print (vector1.angle()) /// output: 71.57
+
+self.anglebetween(othervector) /// vector1.anglebetween(vector2):
+Returns the angle formed between two vectors, for example:
+print (vector1.anglebetween(vector2)) /// output: 50.42
+
+self.compose() /// vector1.compose():
+Returns a list containing the module and angle of the vector.
+print (print (vector1.compose()) /// output: (3.16, 71.57)

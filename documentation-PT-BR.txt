@@ -1,0 +1,104 @@
+DOCUMENTAÇÃO - PT-BR
+------------------------------------
+
+
+COMO CHAMA-LO
+
+Para melhor utilização é recomendável que o módulo seja chamado no formato:
+"from Vectorial import Vector"
+
+Dessa forma a criação de novos vetores fica facilitada, como por exemplo:
+vector1 = Vector(1,3)
+ou vector2 = Vector(2,4)
+
+------------------------------------
+
+FUNÇÃO PRINT
+
+Os vetores são printados no formato de coordenadas, por exemplo:
+print(vector1) /// output: (1,3)
+
+------------------------------------
+
+OPERAÇÕES
+
+Todas as operações entre dois vetores funcionam como qualquer outra operação em Python, como por exemplo:
+
+print(vector1 + vector2) /// output: (3,7)
+print(vector1 - vector2) /// output: (-1,-1)
+print(vector1 * 4) /// output: (4,12)
+
+Ou seja, a operação com vetores resulta em um novo vetor.
+A exceção é quando multiplicamos 2 vetores, o que retorna o produto interno deles:
+
+print(vector1 * vector2) /// output: 50.42
+
+------------------------------------
+
+OPERADORES LÓGICOS
+
+MAIOR QUE (>):
+Permite que seja possível utilizar o operador lógico "maior que", comparando o módulo dos :param other: vetor a ser comparado
+:return: True or False
+
+MENOR QUE (<):
+Permite que seja possível utilizar o operador lógico "menor que", comparando o módulo dos vetores
+:param other: vetor a ser comparado
+:return: True or False
+
+MAIOR OU IGUAL (>=):
+Permite que seja possível utilizar o operador lógico "maior ou igual que", comparando o módulo dos vetores
+:param other: vetor a ser comparado
+:return: True or False
+
+MENOR OU IGUAL (<=):
+Permite que seja possível utilizar o operador lógico "menor ou igual que", comparando o módulo dos vetores
+:param other: vetor a ser comparado
+:return: True or False
+
+IGUAL (==):
+Permite que seja possível utilizar o operador lógico "igual", comparando se dois vetores são iguais. Os vetores só serão consideradores iguais se possuírem mesmo módulo, direção e sentido.
+:param other: vetor a ser comparado
+:return: True or False
+
+DIFERENTE (!=):
+Permite que seja possível utilizar o operador lógico "diferente", comparando se dois vetores são diferente. Os vetores só serão consideradores diferentes se possuírem módulo, direção ou sentido diferentes.
+:param other: vetor a ser comparado
+:return: True or False
+
+------------------------------------
+
+FUNÇÕES STATIC
+
+Devido ao fato de todas as funções dependerem de um vetor representado em coordenadas foi necessário criar uma função a parte para lidar com vetores representados por magnitude e ângulo. Portanto, caso tenha um vetor que não seja representado por coordendas primeiro use a função abaixo. Essa função gerará o mesmo vetor, porém representado em coordenadas. Para voltar a forma original use a função self.compose() no novo vetor.
+
+Vector.decompose(module, angle):
+Retorna um vetor representado com coordenadas.
+print(Vector.decompose(3.16,71.57)) /// output: (1,3)
+
+------------------------------------
+
+FUNÇÕES
+
+Para exemplificar o uso das funções usaremos o vector1 (1,3) criado no início desse documento.
+
+self.unit() /// vector1.unit():
+Retorna o vetor unitário desse vetor, por exemplo:
+print(vector1.unit()) /// output: (0.3164556962025316,0.9493670886075949)
+
+self.module() /// vector1.module():
+Retorna o módulo desse vetor, por exemplo:
+print(vector1.module()) /// output: 3.16
+
+self.angle() /// vector1.angle():
+Retorna o ângulo formado pelo vetor e o eixo x, por exemplo:
+print(vector1.angle()) /// output: 71.57
+
+self.anglebetween(othervector) /// vector1.anglebetween(vector2):
+Retorna o ângulo formado entre dois vetores, por exemplo:
+print(vector1.anglebetween(vector2)) /// output: 50.42
+
+self.compose() /// vector1.compose():
+Retorna uma lista contendo o módulo e o ângulo do vetor.
+print(print(vector1.compose()) /// output: (3.16, 71.57)
+
