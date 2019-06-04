@@ -8,7 +8,7 @@ Optei por não implementar a função de plot visto que é possível plotar faci
 Observe que todos os métodos funcionam utilizando vetores representados com coordenadas, portanto se você tem um vetor representado como módulo e ângulo utilize primeiro o método estático Vector.decompose(), e só então use o vetor resultante com as demações funções. É possível retornar ao estado original utilizando o método self.compose, que retornará uma lista contendo o módulo e o ângulo original.
 
 Você pode o instalar via pip com o comando:
-pip install -i https://test.pypi.org/simple/ pyVector
+pip install pyvectorial
 
 EN-US
 The purpose of this module is to create a way of dealing with vectors that is as close to the built-in function as possible, almost as if the vector becomes a new type of variable within Python. I've tried adding all operations with existing vectors, all possible properties. If I have forgotten something please let me know and I will try to implement.
@@ -19,4 +19,4 @@ Note that all methods work by using vectors represented with coordinates, so if 
 represented as a module and angle, first use the static method Vector.decompose (), and then use the resultant vector with the functions. It is possible to return to the original state using the self.compose method, which will return a list containing the original module and angle.
 
 You can install it via pip with the command:
-pip install -i https://test.pypi.org/simple/ pyVector
+pip install pyvectorial
