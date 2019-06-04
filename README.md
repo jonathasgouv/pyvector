@@ -1,4 +1,4 @@
-# pyvector
+# pyvectorial
 
 PT-BR
 O objetivo desse módulo é criar um modo de lidar com vetores que seja o mais próximo possível de função built-in, quase como se o vetor se torna-se um novo tipo de variável dentro do Python. Eu busquei adicionar todas as operações com vetores existentes, todas as propriedades possíveis. Caso eu tenha esquecido algo por favor me avise e eu tentarei implementar.
