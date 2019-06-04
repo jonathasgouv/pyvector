@@ -48,7 +48,7 @@ It allows the "less than" logical operator to be used by comparing the vector mo
 :param other: vector to be compared
 :return: True or False
 
-GREATER OR EQUAL (> =):
+GREATER OR EQUAL (>=):
 It allows you to use the logical operator "greater than or equal to" by comparing the vector module
 :param other: vector to be compared
 :return: True or False
@@ -63,7 +63,7 @@ It allows you to use the "equal" logical operator, comparing if two vectors are 
 :param other: vector to be compared
 :return: True or False
 
-DIFFERENT (! =):
+DIFFERENT (!=):
 It allows you to use the "different" logical operator, comparing if two vectors are different. The vectors will only be different considering if they have different module, direction or notion.
 :param other: vector to be compared
 :return: True or False
@@ -74,7 +74,7 @@ STATIC FUNCTIONS
 
 Due to the fact that all functions depend on a vector represented in coordinates, it was necessary to create a separate function to deal with vectors represented by magnitude and angle. So if you have a vector that is not represented by coordinates first use the function below. This function will generate the same vector, however represented in coordinates. To return to the original form use the function self.compose() in the new vector.
 
-Vector.decompose (module, angle):
+Vector.decompose(module, angle):
 Returns a vector represented with coordinates.
 print (Vector.decompose(3.16,71.57)) /// output: (1,3)
 
